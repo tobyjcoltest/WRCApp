@@ -1,4 +1,4 @@
-package com.samaritan.house.wrcapp.spark;
+package com.samaritan.wrcapp.spark;
 
 import spark.Request;
 import spark.Response;
