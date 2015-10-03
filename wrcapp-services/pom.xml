@@ -7,11 +7,10 @@
     <parent>
         <artifactId>wrcapp-parent</artifactId>
         <groupId>com.samaritan.wrcapp</groupId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.samaritan.wrcapp</groupId>
     <artifactId>wrcapp-services</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
 
 </project>
