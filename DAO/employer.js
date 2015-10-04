@@ -24,8 +24,8 @@ exports.employers=function getEmployerDetails(req, res,summary) {
 
 exports.newEmployer = function (callback, res, json,UserName,Password) {	
 	var connection=mysql.getConnection();	
-	var encpassword=encryptPassword(Password);
-	var query = connection.query("INSERT INTO LoginInfo set ? ",{UserName:UserName,Password:encpassword,RolesID:2}, function(err, r){
+	//var encpassword=encryptPassword(Password);
+	var query = connection.query("INSERT INTO LoginInfo set ? ",{UserName:UserName,Password:Password,RolesID:2}, function(err, r){
 		if (err) {
 			console.log("Error: " + r);		
 			connection.end();								
