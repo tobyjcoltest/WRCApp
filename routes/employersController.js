@@ -1,5 +1,5 @@
 var mysql = require('./dbConnectionsController');
-var bcrypt = require('./bCrypt');
+//var bcrypt = require('./bCrypt');
 function encryptPassword(pwd)
 {
 	//var bcrypt = require('bcryptjs');

@@ -1,12 +1,6 @@
 var mysql = require('./dbConnectionsController');
-var bcrypt = require('./bCrypt');
-function encryptPassword(pwd)
-{
-	//var bcrypt = require('bcryptjs');
-	var salt = bcrypt.genSaltSync(10);
-	var hash = bcrypt.hashSync(pwd, salt);	
-	return hash;
-}
+//var bcrypt = require('./bCrypt');
+
 exports.employers=function getEmployerDetails(req, res,summary) {	
 		var connection=mysql.getConnection();
 		var query = connection.query("select * from EmployerInfo ",
