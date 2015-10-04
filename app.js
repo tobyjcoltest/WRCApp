@@ -41,7 +41,7 @@ app.set('port', 8000);
 
 app.get('/',workerController.homepage);
 app.post('/wRegister',workerController.workerRegister);
-app.post('/eregister',workerController.employeeRegister);
+app.get('/eregister',workerController.employeeRegister);
 app.post('/login',login.employerLogin);
 
 app.get('/v1/wrc/calendar',calendarController.showCalendar);
