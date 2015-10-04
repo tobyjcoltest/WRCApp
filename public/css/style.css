@@ -26,7 +26,7 @@ a{
 	color: #898989;
 }
 
-a:hover{
+a:hover {
 	text-decoration: none;
 	color: #636363;
 }
@@ -49,6 +49,10 @@ hr{
 }
 
 /* Colors */
+
+.formTextColor {
+  Color:##63666A;
+}
 
 .white{
 	color:#fff !important;
@@ -191,6 +195,7 @@ form textarea{
 	font-size: 13px !important;
 	font-weight: 400 !important;
 	box-shadow: none !important;
+  color: #63666A;
 }
 
 strong{

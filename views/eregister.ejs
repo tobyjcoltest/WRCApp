@@ -35,9 +35,9 @@
 
 
 <div class="login-card">
-    <h1 class="h1RegTitle">Worker Registration Form</h1><br>
-  <form style="margin-left:10%;" action="/newWorker" method="post">
-    <input type="text" id="FirstName"  name="FirstName" placeholder="First Name">
+  <h1 class="h1RegTitle"><b>Worker Registration Form</b></h1><br>
+  <form  style="margin-left:10%;" action="/newWorker" method="post">
+    <input class="formTextColor" type="text" id="FirstName"  name="FirstName" placeholder="First Name">
     <input type="text" id="MiddleName" name="MiddleName"placeholder="Middle Name">
     <input type="text" id="LastName" name="LastName" placeholder="Last Name">
     <br/>
@@ -83,7 +83,7 @@
 </select>
 <br/>
 <br/>
-<label class="textFormColor" for="jsns"><b>Select Type</b></label>
+<label class="textFormColor" for="jsns"><b>Active Worker</b></label>
 <select id="JobSeeker" name="JobSeeker">
     <option value="yes">Yes</option>
     <option value="no">No</option>
@@ -96,7 +96,6 @@
     <option></option>
 </select><br/>
 <br/>
-
     <input type="submit" name="login" class="login login-submit" value="Register">
   </form>
 
