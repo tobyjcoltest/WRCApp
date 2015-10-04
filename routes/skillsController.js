@@ -1,7 +1,7 @@
 var mysql = require('./dbConnectionsController');
-var cookiesHash = req.cookies;
 
 exports.getSkills = function getAllSkils(req, res) {	
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		var query = connection.query("select * from SkillsList",
@@ -23,6 +23,7 @@ exports.getSkills = function getAllSkils(req, res) {
 };
 
 exports.getSkill = function getSkill(req, res) {	
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		skillId = req.params.id;
@@ -46,6 +47,7 @@ exports.getSkill = function getSkill(req, res) {
 };
 
 exports.addSkill = function addSkill(req, res) {	
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		values = {SkillType:req.body.skillType};
@@ -68,6 +70,7 @@ exports.addSkill = function addSkill(req, res) {
 };
 
 exports.updateSkill = function updateSkill(req, res) {
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){		
 		var connection=mysql.getConnection();
 		console.log(req.body.skillType);
@@ -87,6 +90,7 @@ exports.updateSkill = function updateSkill(req, res) {
 };
 
 exports.deleteSkill = function deleteSkill(req, res) {	
+	
 		var connection=mysql.getConnection();
 		skillId = req.params.id;
 		var query = connection.query("delete from SkillsList where SkillId = "+skillId,

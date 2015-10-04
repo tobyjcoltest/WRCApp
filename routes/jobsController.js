@@ -1,7 +1,8 @@
 var mysql = require('./dbConnectionsController');
-var cookiesHash = req.cookies;
+
 
 exports.getJobs = function getAllJobs(req, res) {	
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		var query = connection.query("select * from JobInfo",
@@ -24,7 +25,7 @@ exports.getJobs = function getAllJobs(req, res) {
 
 
 exports.getJob = function getJobs(req, res) {	
-	
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){
 
 		var jobId = req.params.id;
@@ -50,6 +51,7 @@ exports.getJob = function getJobs(req, res) {
 
 
 exports.submitJob = function submitJob(req, res) {	
+	var cookiesHash = req.cookies;
 	if(cookiesHash.id == req.session.id){
 		if(req.session.UserName!=null || req.session.UserName!=" "){
 			var connection=mysql.getConnection();
@@ -78,6 +80,7 @@ exports.submitJob = function submitJob(req, res) {
 
 
 exports.updateJob = function udpateJob(req, res) {	
+	var cookiesHash = req.cookies;
 	
 	if(cookiesHash.id == req.session.id){	
 	

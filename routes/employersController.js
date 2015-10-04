@@ -1,8 +1,7 @@
 var mysql = require('./dbConnectionsController');
-var cookiesHash = req.cookies;
 
 exports.employers = function(json) {
-	if(cookiesHash.id == req.session.id){	
+//	if(cookiesHash.id == req.session.id){	
 		var connection=mysql.getConnection();
 		var query = connection.query("select * from EmployerInfo ",
 				function(err, rows) {
@@ -16,13 +15,13 @@ exports.employers = function(json) {
 				res.send({res:rows});
 			}
 		});
-	}else{
+	// }else{
 
-	}
+	// }
 };
 
 exports.empRegister = function(callback, json) {	
-	if(cookiesHash.id == req.session.id){
+//	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		
 		var query = connection.query("INSERT INTO connections set ? ", json , function(err, r){
@@ -51,7 +50,7 @@ exports.empRegister = function(callback, json) {
 			}
 			connection.end();	
 		});
-	}else{
+	// }else{
 
-	}
+//	}
 }; 
