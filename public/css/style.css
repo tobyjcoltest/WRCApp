@@ -23,7 +23,7 @@ p{
 }
 
 a{
-	color: #898989;
+	color: #fff;
 }
 
 a:hover {
@@ -444,7 +444,7 @@ strong{
 
 .employee a {
   text-decoration: none;
-  color: #666;
+  color: #fff;
   font-weight: 400;
   text-align: center;
   display: inline-block;
