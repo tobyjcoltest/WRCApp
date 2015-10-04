@@ -17,11 +17,10 @@ http://samaritanhousesanmateo.org
 
 #WRC App Technical Architecture
 
-![WRC Applcation Architecture](/images/App_Arch.png?raw=true "WRC
-Application Architecture")
 
 
-# WRC App allows
+
+# WRC App allows:
   * workers to register
   * employers to register
   * employers to submit jobs
@@ -29,4 +28,4 @@ Application Architecture")
   * the WRC to match workers to jobs
   * the WRC feedback to employers
   * the WRC to send surveys to employers and solicit feedback from
-    workers
+    workers.

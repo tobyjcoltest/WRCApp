@@ -5,12 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var controller = require('./routes/Controller');
+var workerController = require('./routes/workerController');
+var jobInfo = require('./routes/jobsController');
+var skillsList = require('./routes/skillsController');
 
 var app = express();
 var http = require('http')
-var jobInfo = require('./routes/job');
-var skillsList = require('./routes/skill');
+
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');

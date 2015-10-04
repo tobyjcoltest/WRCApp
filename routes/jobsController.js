@@ -36,26 +36,35 @@ exports.getJob = function getJobs(req, res) {
 		});
 };
 
-/********************
-exports.submitJob = function submitJob(req, res) {	
-		var connection=mysql.getConnection();
 
-		var query = connection.query("Insert into JobInfo SET ? ",jobInfo,	
+exports.submitJob = function submitJob(req, res) {	
+
+		if(req.session.UserName!=null || req.session.UserName!=" "){
+			var connection=mysql.getConnection();
+
+			var query = connection.query("Insert into JobInfo SET ? ",jobInfo,	
 				function(err, rows) {
-			connection.end();
-			if (err) {
-				console.log(err);
-				//cstmError.mySqlException(err, res);					
-				//cstmError.throwException('Something went wrong.',res);
-			} else {
-				res.send({res:"Success"});
-			}
-			conneciton.end();
-		});
+				connection.end();
+				if (err) {
+					console.log(err);
+					//cstmError.mySqlException(err, res);					
+					//cstmError.throwException('Something went wrong.',res);
+				} else {
+					res.send({res:"Success"});
+				}
+				conneciton.end();
+			});
+		}else{
+			res.render('/index');
+		}
+		
 };
 
 
 exports.updateJob = function udpateJob(req, res) {	
+	
+	if(req.session.UserName!=null || req.session.UserName!=" "){	
+	
 		var connection=mysql.getConnection();
 
 		var query = connection.query("Update into JobInfo SET ? ",jobInfo,	
@@ -70,8 +79,10 @@ exports.updateJob = function udpateJob(req, res) {
 			}
 			conneciton.end();
 		});
+	}else{
+		res.render('/index')
+	}
 };
-**************/
 
 exports.deleteJob = function deleteJob(req, res) {	
 		var connection=mysql.getConnection();
