@@ -35,6 +35,10 @@ app.use(allowCrossDomain);
 app.set('port', 8000);
 
 app.get('/',controller.homepage);
+app.get('/wRegister',controller.workerRegister);
+app.get('/eRegister',controller.employeeRegister);
+app.get('/eLogin',controller.eLogin);
+
 //app.get('/getWorkerInfo', controller.getWorkerInfo);
 app.post('/newWorker', controller.newWorker);
 //app.post('/register',controller.register);
