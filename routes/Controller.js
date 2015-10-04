@@ -3,7 +3,7 @@ var worker = require('../DAO/worker');
 
 exports.homepage = function(req, res){
 	console.log("here.");
-	res.render('eregister');
+	res.render('index');
 	// res.send("Welcome to my NodeJS App. We're going Old School!!");
 }
 
