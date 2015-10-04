@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Samaritan House</title>
+<title>WRC Application Login</title>
 <meta name="description" content="Samaritan House">
 <meta name="keywords" content="Samaritan House">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 </head>
 
@@ -19,9 +20,9 @@
   <div class="header-navigation">
    <div class="container">
     <div class="row">
-     <div class="col-md-3">
+     <div class="col-md-4">
       <div class="logo">
-        <h1>Samaritan <i class="fa fa-home"></i></h1>
+        <h1><i class="fa fa-home"> Samaritan House</i></h1>
       </div>
      </div>
     </div>
@@ -33,68 +34,19 @@
 <br/>
 
 
-<div class="container" style="margin-left:10%;">
-<div class="box-wrapper">
-<div class="container">
-<div class="col-md-4" style="float:left;">
-<div class="row">
-<div class="col-md-6 col-sm-6 col-xs-6">
-<div class="box box-md br-red animated">
-<div class="box-hover box-hover-black">
-<span class="hover-icon">GO</span>
-</div>
-<a href="/wRegister">
-<div class="box-content navigation">
-<i class="fa fa-users"></i>
-<span class="box-title">Worker</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</div>
+<div class="employee">
+  <h1 class="h1RegTitle"><b>Login to the WRC</b></h1><br>
+  <form style="margin-left:10%;">
+  <input type="text" id="userid" placeholder="Username" size="65">
+    <br/>
+    <br/>
+    <input type="password" id="password" placeholder="Password" size="65">
+<br/>
+<br/>
+    <input type="submit" name="employee" class="employeebutton employee-submit" value="Sign In">
+  </form>
 
-
-<div class="col-md-4">
-<div class="row">
-<div class="col-md-6 col-sm-6 col-xs-6">
-<div class="box box-md br-blue animated">
-<div class="box-hover box-hover-black">
-<span class="hover-icon">GO</span>
 </div>
-<a href="/eRegister">
-<div class="box-content navigation">
-<i class="fa fa-user"></i>
-<span class="box-title">Employer</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-<div class="row">
-<div class="col-md-6 col-sm-6 col-xs-6">
-<div class="box box-md br-green animated">
-<div class="box-hover box-hover-black">
-<span class="hover-icon">GO</span>
-</div>
-<a href="/eLogin">
-<div class="box-content navigation">
-<i class="fa fa-cog"></i>
-<span class="box-title">Admin</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 
 
 		<script src="js/jquery.js"></script>
