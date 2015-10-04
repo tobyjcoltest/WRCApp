@@ -82,5 +82,19 @@ exports.deleteEmployer = function(callback, EmployerID){
 	});	
 };
 
+exports.getWorkerDetails = function(callback,res) {	
+	var connection=mysql.getConnection();
+	var query = connection.query("select * from EmployerInfo " ,
+			function(err, rows) {
+		connection.end();
+		if (err) {
+			console.log(err);
+			//cstmError.mySqlException(err, res);					
+			//cstmError.throwException('Something went wrong.',res);
+		} else {
+			res.send({res:rows});
+		}
+	});
+};	
 
  

@@ -49,6 +49,8 @@ app.get('/jobdescription',calendarController.getJobDescription);
 
 app.get('/v1/wrc/employer',employersController.employer);
 app.post('/newEmployer',employersController.newEmployer);
+/*app.post('/editEmployer',employersController.editEmployer)
+app.post('/deleteEmployer',employersController.deleteEmployer)*/
 
 
 //app.get('/getWorkerInfo', controller.getWorkerInfo);
