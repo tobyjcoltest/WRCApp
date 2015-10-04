@@ -29,6 +29,8 @@ CREATE TABLE `JobInfo` (
   `EmployerRating` int(11) DEFAULT NULL,
   `WorkerRating` int(11) DEFAULT NULL,
   `JobStatusID` int(11) DEFAULT NULL,
+  `WorkerComments` int(11) DEFAULT NULL,
+  `EmployerComments` int(11) DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL,
   `EmployerID` int(11) DEFAULT NULL,
   PRIMARY KEY (`JobID`),
