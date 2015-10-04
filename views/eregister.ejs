@@ -20,9 +20,9 @@
   <div class="header-navigation">
    <div class="container">
     <div class="row">
-     <div class="col-md-3">
+     <div class="col-md-4">
       <div class="logo">
-        <h1>Samaritan <i class="fa fa-home"></i></h1>
+        <h1><i class="fa fa-home"></i> Samaritan House</h1>
       </div>
      </div>
     </div>
@@ -35,7 +35,7 @@
 
 
 <div class="login-card">
-    <h1>Register</h1><br>
+    <h1 class="h1RegTitle">Worker Registration Form</h1><br>
   <form style="margin-left:10%;" action="/newWorker" method="post">
     <input type="text" id="FirstName"  name="FirstName" placeholder="First Name">
     <input type="text" id="MiddleName" name="MiddleName"placeholder="Middle Name">
@@ -60,12 +60,12 @@
     <input type="text" id="SSN" name="SSN" required placeholder="SSN-###-##-####" size="65"/>
 <br/>
 <br/>
-<label for="dob"><b.Date of Birth(DOB)</b></label>
+<label class="textFormColor" for="dob"><b>Date of Birth</b></label>
  <input type="date" id="DOB" name="DOB" required size="65"/>
 
 <br/>
 <br/>
-<label for="ethnicity"><b>Ethnicity</b></label>
+<label class="textFormColor" for="ethnicity"><b>Ethnicity</b></label>
 <select id="Ethnicity" name="Ethnicity" width="100px">
     <option value="mixedrace">Mixed Race</option>
     <option value="arctic">Arctic</option>
@@ -83,14 +83,14 @@
 </select>
 <br/>
 <br/>
-<label for="jsns"><b>Select Type</b></label>
+<label class="textFormColor" for="jsns"><b>Select Type</b></label>
 <select id="JobSeeker" name="JobSeeker">
     <option value="yes">Yes</option>
     <option value="no">No</option>
 </select>
 <br/>
 <br/>
-<label for="jsns"><b>Skills</b></label>
+<label class="textFormColor" for="jsns"><b>Skills</b></label>
 <select id="Skills" name="Skills">
     <option value="1">1</option>
     <option></option>
