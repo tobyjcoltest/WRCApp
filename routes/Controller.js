@@ -7,6 +7,23 @@ exports.homepage = function(req, res){
 	// res.send("Welcome to my NodeJS App. We're going Old School!!");
 }
 
+exports.workerRegister = function(req, res){
+	console.log("here.");
+	res.render('wRegister');
+	// res.send("Welcome to my NodeJS App. We're going Old School!!");
+}
+exports.employeeRegister = function(req, res){
+	console.log("here.");
+	res.render('eRegister');
+	// res.send("Welcome to my NodeJS App. We're going Old School!!");
+}
+exports.eLogin = function(req, res){
+	console.log("here.");
+	res.render('eLogin');
+	// res.send("Welcome to my NodeJS App. We're going Old School!!");
+}
+
+
 exports.newWorker = function(req, res){
 	json = {};
 	json.FirstName = req.body.FirstName;
