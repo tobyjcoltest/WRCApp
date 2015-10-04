@@ -38,6 +38,7 @@ app.get('/',controller.homepage);
 //app.get('/getWorkerInfo', controller.getWorkerInfo);
 app.post('/newWorker', controller.newWorker);
 //app.post('/register',controller.register);
+app.get('/v1/wrc/workers',controller.getWorkers);
 
 // Job API's
 app.get('/v1/wrc/job', jobInfo.getJobs);

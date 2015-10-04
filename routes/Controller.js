@@ -50,3 +50,14 @@ exports.getWorker = function(req,res){
 		res.send("Invalid WorkerID.")
 	}
 }
+
+exports.getWorkers = function(req, res){
+	worker.getWorkers(req, res, function(err, result){
+		if(err){
+			console.log("Error: "+err);
+		}else{
+			console.log("Success!!");
+			res.render('someWebpage');
+		}
+	});
+}
