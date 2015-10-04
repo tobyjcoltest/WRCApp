@@ -7,7 +7,7 @@ exports.employerLogin = function(req, res){
 			res.error=err;									
 		} 
 		else{
-			if((result[0].UserName == json.UserName) && (result[0].Password == json.Password)){
+			if((result[0].UserName == req.body.UserName) && (result[0].Password == req.body.UserName)){
 				req.session.UserName = login[0].UserName;
 				if(result[0].Role == "Employee"){
 					res.render('e'); 

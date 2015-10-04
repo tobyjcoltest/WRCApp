@@ -11,6 +11,7 @@ var employersController=require('./routes/employersController');
 var calendarController=require('./routes/calendarController');
 var jobInfo = require('./routes/jobsController');
 var skillsList = require('./routes/skillsController');
+var login = require('./routes/loginController');
 
 var app = express();
 var http = require('http')
@@ -39,9 +40,9 @@ app.use(allowCrossDomain);
 app.set('port', 8000);
 
 app.get('/',workerController.homepage);
-app.get('/wRegister',workerController.workerRegister);
-app.get('/eRegister',workerController.employeeRegister);
-app.get('/eLogin',workerController.eLogin);
+app.post('/wRegister',workerController.workerRegister);
+app.post('/eregister',workerController.employeeRegister);
+app.post('/login',login.employerLogin);
 
 app.get('/v1/wrc/calendar',calendarController.showCalendar);
 app.get('/getcalendar',calendarController.getCalendarView);

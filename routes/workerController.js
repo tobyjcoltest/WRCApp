@@ -14,7 +14,7 @@ exports.workerRegister = function(req, res){
 }
 exports.employeeRegister = function(req, res){
 	console.log("here.");
-	res.render('eRegister');
+	res.render('eregister');
 	// res.send("Welcome to my NodeJS App. We're going Old School!!");
 }
 exports.eLogin = function(req, res){
