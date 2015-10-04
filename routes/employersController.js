@@ -15,6 +15,11 @@ exports.employers = function(json) {
 		});
 };
 
+exports.employer = function(req, res){
+	console.log("here.");
+	res.render('eregister');	
+};
+
 exports.empRegister = function(callback, json) {	
 	var connection=mysql.getConnection();
 	

@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var workerController = require('./routes/workerController');
+var employersController=require('./routes/employersController');
+var calendarController=require('./routes/calendarController');
 var jobInfo = require('./routes/jobsController');
 var skillsList = require('./routes/skillsController');
 
@@ -39,6 +41,15 @@ app.get('/',controller.homepage);
 app.get('/wRegister',controller.workerRegister);
 app.get('/eRegister',controller.employeeRegister);
 app.get('/eLogin',controller.eLogin);
+
+app.get('/v1/wrc/calendar',calendarController.showCalendar);
+app.get('/getcalendar',calendarController.getCalendarView);
+app.get('/renderevents',calendarController.renderEvents);
+app.get('/jobdescription',calendarController.getJobDescription);
+
+app.get('/v1/wrc/employer',employersController.employer);
+app.post('/newEmployer',employersController.newEmployer);
+
 
 //app.get('/getWorkerInfo', controller.getWorkerInfo);
 app.post('/newWorker', controller.newWorker);
