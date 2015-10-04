@@ -40,9 +40,10 @@ app.use(allowCrossDomain);
 app.set('port', 8000);
 
 app.get('/',workerController.homepage);
-app.post('/wRegister',workerController.workerRegister);
+app.get('/wRegister',workerController.workerRegister);
 app.get('/eregister',workerController.employeeRegister);
 app.post('/login',login.employerLogin);
+app.get('/aHome', workerController.aHome);
 
 app.get('/v1/wrc/calendar',calendarController.showCalendar);
 app.get('/getcalendar',calendarController.getCalendarView);

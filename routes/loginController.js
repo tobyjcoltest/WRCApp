@@ -11,7 +11,7 @@ exports.employerLogin = function(req, res){
 				//req.session.UserName = login[0].UserName;
 				if(result[0].RolesID == "1"){
 					console.log("Reached Here. 1");
-					res.render('aHome'); 
+					res.render('aFirst'); 
 				}else if(result[0].RolesID == "2"){
 					console.log("Reached Here. 2"); 
 					res.render('eHome'); 

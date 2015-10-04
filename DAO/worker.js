@@ -56,7 +56,8 @@ exports.newWorker = function (callback, res, json, skID) {
 						} 
 						else {
 							console.log("Level 3 SUCCESS");
-							res.send({"msg":"successfully inserted"});
+							//res.send({"msg":"successfully inserted"});
+							res.render('aFirst');
 							connection.end();	
 						}
 					});

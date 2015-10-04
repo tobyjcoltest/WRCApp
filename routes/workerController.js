@@ -53,6 +53,10 @@ exports.newWorker = function(req, res){
 	},res, json, skID);
 }
 
+exports.aHome = function(req, res){
+	res.render('aHome');
+}
+
 exports.getWorker = function(req,res){
 	if(req.body.WorkerID!= null){
 		worker.getWorkerDetails(function(err, result){
