@@ -86,7 +86,7 @@ CREATE TABLE `WorkerInfo` (
   `FirstName` varchar(45) DEFAULT NULL,
   `MiddleName` varchar(45) DEFAULT NULL,
   `LastName` varchar(45) DEFAULT NULL,
-  `DOB` varchar(10) DEFAULT NULL,
+  `DOB` date DEFAULT NULL,
   `SSN` varchar(12) DEFAULT NULL,
   `Address1` varchar(30) DEFAULT NULL,
   `Address2` varchar(30) DEFAULT NULL,
