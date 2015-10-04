@@ -50,6 +50,9 @@ exports.getWorker = function(req,res){
 		res.send("Invalid WorkerID.")
 	}
 }
+exports.getDashboard = function(req,res){
+	res.render("dashboard");
+}
 
 exports.getWorkers = function(req, res){
 	worker.getWorkers(req, res, function(err, result){

@@ -39,20 +39,21 @@ app.get('/',controller.homepage);
 app.post('/newWorker', controller.newWorker);
 //app.post('/register',controller.register);
 app.get('/v1/wrc/workers',controller.getWorkers);
+app.get('/dashboard',controller.getDashboard);
 
 // Job API's
 app.get('/v1/wrc/job', jobInfo.getJobs);
 //app.post('/v1/wrc/job', jobInfo.submitJob);
 app.get('/v1/wrc/job/:id', jobInfo.getJob);
 //app.put('/v1/wrc/job/:id', jobInfo.udpateJob);
-app.delete('/v1/wrc/job/:id', jobInfo.deleteJob);
+//app.delete('/v1/wrc/job/:id', jobInfo.deleteJob);
 
 //Skill API's
 app.get('/v1/wrc/skills', skillsList.getSkills);
 app.get('/v1/wrc/skill/:id', skillsList.getSkill);
 app.post('/v1/wrc/skills/', skillsList.addSkill);
 app.put('/v1/wrc/skills/:id', skillsList.updateSkill);
-app.delete('/v1/wrc/skills/:id', skillsList.deleteSkill);
+//app.delete('/v1/wrc/skills/:id', skillsList.deleteSkill);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

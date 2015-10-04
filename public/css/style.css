@@ -307,6 +307,9 @@ strong{
   position: relative;
 }
 
+.regButtonFS {
+  font-size: 16px;
+}
 
 .login {
   text-align: center;
