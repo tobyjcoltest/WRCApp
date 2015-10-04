@@ -1,4 +1,5 @@
 var mysql = require('./dbConnectionsController');
+var employer = require('../DAO/employer');
 //var bcrypt = require('./bCrypt');
 function encryptPassword(pwd)
 {
@@ -39,6 +40,7 @@ exports.newEmployer = function(req, res){
 			console.log("Error: "+err);
 		}else{
 			console.log("NOTHING.");
+			res.render('eHome');
 		}
 	},res, json,UserName,Password);
 

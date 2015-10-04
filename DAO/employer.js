@@ -39,6 +39,7 @@ exports.newEmployer = function (callback, res, json,UserName,Password) {
 									connection.end();								
 								} 
 								else {
+									callback(null, true);
 									connection.end();
 								}				
 							});
