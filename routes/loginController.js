@@ -2,7 +2,7 @@ var mysql = require('./dbConnectionsController');
 
 exports.employerLogin = function(req, res){
 	var connection=mysql.getConnection();
-	var query = connection.query("Select * from LoginInfo where username = ? and Password=< ",[req.body.UserName, req.body.Password] , function(err, result){
+	var query = connection.query("Select * from LoginInfo where username = ? and Password=? ",[req.body.UserName, req.body.Password] , function(err, result){
 		if (err) {
 			res.error=err;									
 		} 
