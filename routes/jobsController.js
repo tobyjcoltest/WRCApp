@@ -1,6 +1,8 @@
 var mysql = require('./dbConnectionsController');
+var cookiesHash = req.cookies;
 
 exports.getJobs = function getAllJobs(req, res) {	
+	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		var query = connection.query("select * from JobInfo",
 				function(err, rows) {
@@ -10,15 +12,21 @@ exports.getJobs = function getAllJobs(req, res) {
 				//cstmError.mySqlException(err, res);					
 				//cstmError.throwException('Something went wrong.',res);
 			} else {
+				res.setHeader('Set-Cookie', req.session.id);
 				res.send({res:rows});
 			}
 			connection.end();
 		});
+	}
+		
 
 };
 
 
 exports.getJob = function getJobs(req, res) {	
+	
+	if(cookiesHash.id == req.session.id){
+
 		var jobId = req.params.id;
 
 		var connection=mysql.getConnection();
@@ -30,15 +38,19 @@ exports.getJob = function getJobs(req, res) {
 				//cstmError.mySqlException(err, res);					
 				//cstmError.throwException('Something went wrong.',res);
 			} else {
+				res.setHeader('Set-Cookie', req.session.id);
 				res.send({res:rows});
 			}
 			connection.end();
 		});
+	}else{
+
+	}
 };
 
 
 exports.submitJob = function submitJob(req, res) {	
-
+	if(cookiesHash.id == req.session.id){
 		if(req.session.UserName!=null || req.session.UserName!=" "){
 			var connection=mysql.getConnection();
 
@@ -50,6 +62,7 @@ exports.submitJob = function submitJob(req, res) {
 					//cstmError.mySqlException(err, res);					
 					//cstmError.throwException('Something went wrong.',res);
 				} else {
+					res.setHeader('Set-Cookie', req.session.id);
 					res.send({res:"Success"});
 				}
 				conneciton.end();
@@ -57,13 +70,16 @@ exports.submitJob = function submitJob(req, res) {
 		}else{
 			res.render('/index');
 		}
+	}else{
+
+	}
 		
 };
 
 
 exports.updateJob = function udpateJob(req, res) {	
 	
-	if(req.session.UserName!=null || req.session.UserName!=" "){	
+	if(cookiesHash.id == req.session.id){	
 	
 		var connection=mysql.getConnection();
 
@@ -85,6 +101,7 @@ exports.updateJob = function udpateJob(req, res) {
 };
 
 exports.deleteJob = function deleteJob(req, res) {	
+
 		var connection=mysql.getConnection();
 		var jobId = req.params.id;
 		var query = connection.query("Delete from JobInfo where  JobId = " + jobId,	
