@@ -5,11 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var controller = require('./routes/controller');
+var controller = require('./routes/Controller');
 
 var app = express();
 var http = require('http')
-
+var jobInfo = require('./routes/job');
+var skillsList = require('./routes/skill');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -37,6 +38,20 @@ app.get('/',controller.homepage);
 //app.get('/getWorkerInfo', controller.getWorkerInfo);
 app.post('/newWorker', controller.newWorker);
 //app.post('/register',controller.register);
+
+// Job API's
+app.get('/v1/wrc/job', jobInfo.getJobs);
+//app.post('/v1/wrc/job', jobInfo.submitJob);
+app.get('/v1/wrc/job/:id', jobInfo.getJob);
+//app.put('/v1/wrc/job/:id', jobInfo.udpateJob);
+app.delete('/v1/wrc/job/:id', jobInfo.deleteJob);
+
+//Skill API's
+app.get('/v1/wrc/skills', skillsList.getSkills);
+app.get('/v1/wrc/skill/:id', skillsList.getSkill);
+app.post('/v1/wrc/skills/', skillsList.addSkill);
+app.put('/v1/wrc/skills/:id', skillsList.updateSkill);
+app.delete('/v1/wrc/skills/:id', skillsList.deleteSkill);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
