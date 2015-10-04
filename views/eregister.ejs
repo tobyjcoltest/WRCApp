@@ -36,41 +36,41 @@
 
 <div class="employee">
     <h1 class="h1RegTitle">Employer Registration Form</h1><br>
-  <form style="margin-left:10%;" action="">
-  <input type="text" id="userid" placeholder="Username" size="65">
+  <form style="margin-left:10%;" action="/v1/wrc/newEmployer" method="post">
+  <input type="text" id="userid" name="userid" placeholder="Username" size="65">
     <br/>
     <br/>
-    <input type="password" id="password" placeholder="Password" size="65">
+    <input type="password" id="password" name="password" placeholder="Password" size="65">
     <br/>
     <br/>
     <input type="password" id="repassword" placeholder="Re-enter Password" size="65">
     <br/>
     <br/>
-    <input type="text" id="fname" placeholder="First Name">
-    <input type="text" id="mname" placeholder="Middle Name">
-    <input type="text" id="lname" placeholder="Last Name">
+    <input type="text" id="fname" name="fname" placeholder="First Name">
+    <input type="text" id="mname" name="mname" placeholder="Middle Name">
+    <input type="text" id="lname" name="lname" placeholder="Last Name">
     <br/>
     <br/>
-    <input type="text" id="company" placeholder="Company Name" size="65">
+    <input type="text" id="company" name="company" placeholder="Company Name" size="65">
     <br/>
     <br/>
         
-    <input type="text" id="address" placeholder="Address #1" size="32">
-    <input type="text" id="address1" placeholder="Address #2" size="31">
+    <input type="text" id="address1" name="address1" placeholder="Address #1" size="32">
+    <input type="text" id="address2" name="address2" placeholder="Address #2" size="31">
     <br/>
     <br/>
-    <input type="text" id="city" placeholder="City">
-    <input type="text" id="state" placeholder="State">
-    <input type="text" id="zip" placeholder="Zip">
+    <input type="text" id="city" name="city" placeholder="City">
+    <input type="text" id="state" name="state" placeholder="State">
+    <input type="text" id="zip" name="zip" placeholder="Zip">
     <br/>
     <br/>
-    <input type="tel" id="phone" placeholder="Phone" size="65">
+    <input type="tel" id="phone" name="phone" placeholder="Phone" size="65">
     <br/>
     <br/>
-    <input type="email" id="email" placeholder="Email" size="65">
+    <input type="email" id="email" name="email" placeholder="Email" size="65">
     <br/>
     <br/>
-    <input type="text" id="dlid" required pattern="^d{3}-d{2}-d{4}$" placeholder="###-##-####" size="65"/>
+    <input type="text" id="dlid" name="dlid" required placeholder="DLID" size="65"/>
 <br/>
 <br/>
     <input type="submit" name="employee" class="employeebutton employee-submit" value="Register">
